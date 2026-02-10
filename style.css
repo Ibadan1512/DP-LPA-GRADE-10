@@ -1,0 +1,145 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f4f6f8;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  background: white;
+  padding: 25px;
+  width: 90%;
+  max-width: 400px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,.1);
+}
+
+.rules {
+  font-size: 14px;
+  color: #444;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background: #1e88e5;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  background: #1e88e5;
+  color: white;
+  padding: 10px;
+}
+
+#examForm {
+  padding: 15px;
+}
+
+.question {
+  background: white;
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.submit {
+  margin: 20px;
+  background: #e53935;
+}
+
+.loading {
+  color: gray;
+  text-align: center;
+}
+
+#warning {
+  display: none;
+  background: #b71c1c;
+  color: white;
+  padding: 12px;
+  margin: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  animation: shake 0.3s;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+/* ---------- CBT EXAM LAYOUT ---------- */
+
+.question {
+  background: #ffffff;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.question-text {
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 18px;          /* 👈 THIS moves the bullet away */
+  padding: 14px 16px;
+  background: #f6f7f9;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  font-size: 15px;
+}
+
+
+.option:hover {
+  background: #c1d0f1;
+}
+
+.option input[type="radio"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+.option input[type="radio"]:checked {
+  accent-color: #4f46e5;
+}
+
+/* 📱 Mobile view */
+@media (max-width: 600px) {
+  .options-grid {
+    grid-template-columns: 1fr;
+  }
+}
