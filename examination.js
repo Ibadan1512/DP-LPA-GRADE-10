@@ -31,10 +31,10 @@ if (nav && nav.type === "reload") {
   violations++;
   localStorage.setItem(violationKey, violations);
 
-  alert(`🚫 Refresh detected!\nViolations: ${violations}/3`);
+  alert(`🚫 Refresh detected!\nViolations: ${violations}/2`);
 }
 
-if (violations >= 3) {
+if (violations >= 2) {
   alert("❌ Too many violations. Exam will be submitted.");
   submitExam();
 }
@@ -44,7 +44,7 @@ if (violations >= 3) {
 ===================================================== */
 let timeLeft = localStorage.getItem(timeKey)
   ? parseInt(localStorage.getItem(timeKey))
-  : 30 * 60; // 30 minutes
+  : 6 * 60; // 6 minutes
 
 const timerDiv = document.getElementById("timer");
 
@@ -180,3 +180,4 @@ function submitExam() {
     window.location.href = "index.html";
   });
 }
+
