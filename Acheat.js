@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
 
   let violations = 0;
-  const MAX_VIOLATIONS = 3;
+  const MAX_VIOLATIONS = 2;
   const warningBox = document.getElementById("warning");
 
   function logViolation(type) {
@@ -79,3 +79,4 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
 });
+
